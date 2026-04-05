@@ -1,6 +1,3 @@
-import os
-os.environ['TOKENIZERS_PARALLELISM'] = 'false'
-
 from sentence_transformers import SentenceTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
