@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ["python311"]
+
+[phases.install]
+cmds = [
+  "pip install --no-cache-dir fastapi uvicorn[standard] supabase groq python-dotenv pandas numpy scikit-learn",
+  "pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu",
+  "pip install --no-cache-dir sentence-transformers"
+]
+
+[start]
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
